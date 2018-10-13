@@ -1,0 +1,31 @@
+O objetivo deste trabalho é implementar um analisador e um gerador para uma gramática
+para uma linguagem específica de domínio similar à usada em Rails, Grails e Spring Roo. A
+linguagem está descrita no tutorial do Xtext. O trabalho deve ser realizado de forma
+incremental, com o uso de testes automatizados.
+
+A descrição do analisador e do gerador da linguagem pode ser encontrado em:
+
+• https://www.eclipse.org/Xtext/documentation/102_domainmodelwalkthrough.html
+• https://www.eclipse.org/Xtext/documentation/103_domainmodelnextsteps.html
+
+Verifiquem a gramática da linguagem e as regras que envolvem o teste atual. O trabalho
+consiste em configurar e implementar o analisador e o gerador descritos usando XText
+capazes de reconhecer expressões e programas nessa linguagem, a partir do símbolo inicial
+da gramática. Coletem exemplos de complexidade crescente, utilizando o material indicado.
+
+
+Especial atenção em utilizar terminais e não-terminais que representem corretamente cada
+produção. No caso de alternativas, represente apenas as alternativas necessárias para
+reconhecer o teste atual.
+
+Utilize testes automáticos e refinamentos sucessivos para ganhar tempo. Para cada teste
+reconhecido.
+
+Deve ser gerado código Java que complemente a
+implementação gerando: (a) uma representação de interface, ex., HTML e CSS OU (b) um
+código equivalente para uma linguagem de banco de dados, ex., SQL. O programa Java deve
+ser válido.
+
+Deve ser escolhida a tarefa de geração de artefatos de frontend ou de backend. A gramática
+original deve ser acrescida de ao menos uma regra que auxilie a gerar artefatos de maior
+qualidade. 

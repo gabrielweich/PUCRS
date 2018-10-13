@@ -1,0 +1,26 @@
+Definição:
+
+Ler de um arquivo as seguintes informações, nesta ordem: número de processos, tamanho de fatia de tempo, e para cada processo, tempo de chegada, tempo de execução, prioridade (1 até 9 - prioridade 1 é a melhor) e tempos de acesso a operações de E/S (tempo correspondente a sua execução).
+
+Imprimir os tempos médios de resposta e espera para o algoritmo:
+
+        - Round Robin com prioridade.
+
+Além disto imprimir um gráfico (texto) mostrando como os processo foram executados. Considerar uma unidade de tempo para troca de contexto (representado abaixo como C). Tempo começa em 1. Processos iniciam com 1. Processo chega no tempo x e pode começar a executar (respeitando o algoritmo de escalonamento) no tempo x+2 (1 unidade para troca de contexto).
+
+Tempo que leva para fazer uma operação de entrada e saída: use valor constante igual a 4. 
+
+Exemplo de arquivo de entrada:
+
+5
+3
+3 10 2
+5 12 1
+9 15 2
+11 15 1
+12 8 5 2
+
+Exemplo de gráfico a ser exibido para o exemplo acima:
+
+---C1C222C222C444C222C444C222C444C444C444C11C333C111C333C111C333C1C333C333C55C---C5C555C55
+

@@ -1,0 +1,111 @@
+grammar org.mito.gesiel.Gesiel with org.eclipse.xtext.common.Terminals
+
+generate gesiel "http://www.mito.org/gesiel/Gesiel"
+
+Domainmodel:
+	(config=Config)?
+    (elements+=Entity)*;
+ 
+
+Entity:
+    'entity' name=ID ('extends' superType=[Entity])? '{'
+        (attributes+=Attribute)*
+        (relations+=Relation)* '}';
+
+
+Config:
+	FileNameConfig
+;
+
+
+FileNameConfig:
+	'@filename' '=' name=STRING
+;
+Attribute:
+	name=ID ":" type=Type modifier=Modifier deflt=Default?
+;
+
+Default:
+	'=' name=STRING
+;
+	
+Modifier:
+	 unique?='unique'? & allowNull?='allowNull'?
+;
+
+
+
+Relation:
+	ROneToOne | ROneToMany | RManyToMany
+;
+
+ROneToOne:
+	type=[Entity] modifier=Modifier
+;
+
+ROneToMany:
+	'many' type=[Entity] modifier=Modifier
+;
+
+RManyToMany:
+	'many' type=[Entity] "{" (attributes+=Attribute)* (relations+=ROneToOne)* "}"
+;
+
+
+
+Type:
+	Text | Varchar | Char | Integer | Bool | Serial | Date | Time | Timestamp | Timestampz | Interval | Numeric
+;
+
+
+Text:
+    {Text} 'text'
+;
+
+Varchar:
+    'varchar' '(' n=INT ')'
+;
+
+Char:
+    'char' '(' n=INT ')'
+;
+
+Integer:
+    {Integer} ('integer' | 'int')
+;
+
+Bool:
+    {Bool} ('bool' | 'boolean')
+;
+
+Serial:
+    {Serial} ('serial' | 'auto_increment')
+;
+
+Date:
+    {Date} 'date'
+;
+
+Time:
+    {Time} 'time'
+;
+
+Timestamp:
+    {Timestamp} 'timestamp'
+;
+
+Timestampz:
+    {Timestampz} 'timestampz'
+;
+
+Interval:
+    {Interval} 'interval'
+;
+
+Numeric:
+    {Numeric} 'numeric' ('(' (p=INT)? (',' s=INT)? ')')?
+;
+
+
+terminal BOOLEAN:
+	'true'|'false';

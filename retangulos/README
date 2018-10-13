@@ -1,0 +1,22 @@
+Os quadrinhos de quadradinhos
+
+
+Você está prestando assessoria a pintores cubistas 1 que estão enfrentando um problema inespe-
+rado depois de terem programado um sistema de pintura usando IA. O sistema até que pinta
+bem, mas surgiu um problema devido à sobreposição de retângulos nas pinturas (os pintores
+são péssimos programadores) e alguns retângulos cam parcialmente (ou até totalmente) en-
+cobertos. Isso conduz a um excesso de gastos com tinta e a situação econômica não permite
+esses luxos. Sobrou pra você escrever um algoritmo que faça a previsão correta dos gastos com
+tinta, recebendo os seguintes dados:
+
+• Um inteiro 1 ≤ n ≤ 50000 .
+
+• Uma lista contendo coordenadas inteiras x 1 , y 1 , x 2 , y 2 determinando a posição de n retân-
+gulos R 1 , R 2 , . . . , R n .
+
+• Cada retângulo também tem uma cor associada a ele e assume-se que os retângulos são
+pintados na ordem dada, sobrepondo-se livremente.
+
+Seu algoritmo deve determinar quanta área será pintada de cada cor se os retângulos R i forem
+pintados. Os artistas precisam da área exata para poder calcular a quantidade de tinta e
+baratear custos.
