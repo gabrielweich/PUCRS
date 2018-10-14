@@ -1,0 +1,35 @@
+grammar org.xtext.example.mydsl.Cpp with org.eclipse.xtext.common.Terminals
+
+generate cpp "http://www.xtext.org/example/mydsl/Cpp"
+
+
+Model:
+	structs+=Struct*;
+
+
+Struct:
+    'struct' (name=ID)? (':' superType=[Struct])? '{'
+        (members+=Member)* '}'  (objects+=Object)? ";";
+
+
+
+
+Member:
+	(type=Type | stype=[Struct]) name=ID  (array=Array)?";" 
+;
+
+Array:
+	"[" name=INT "]" 
+;
+
+Object:
+	name=ID (array=Array)? ("," objects=Object)*
+;
+
+Type:
+	"char" | "int" | "bool" | "float" | "double" | "void" | "wchar_t" | "string"
+;
+
+
+
+

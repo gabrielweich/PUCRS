@@ -1,0 +1,5 @@
+O trabalho consiste em criar uma gramática usando XText capaz de reconhecer o comando
+escolhido a partir do símbolo inicial da gramática. Não é necessário reconhecer todo o
+programa exemplo, apenas os usos do comando escolhido. Simplifiquem os demais
+comandos para controlar a complexidade do trabalho. Por exemplo, se escolherem um
+comando que controla um bloco de comandos, simplifiquem o bloco para um único comando. 
